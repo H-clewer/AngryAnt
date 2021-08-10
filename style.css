@@ -1,0 +1,127 @@
+/*Some google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+/*NAVBAR*/
+.navbar{
+    position: fixed;
+    width: 100%;
+    /* background: palevioletred; */
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0px 0px;
+
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    background: palevioletred;
+    padding: 0px 0 8px;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 90px;
+    margin: auto;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*navbar links*/
+.navbar .menu li{
+
+    list-style: none;
+    display: inline-block;
+    border-radius: 0 0 5px 5px;
+    
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.navbar .menu li:hover{
+    background-color: palevioletred;
+    color: black
+}
+
+.navbar .menu li a{
+    min-width: 100px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 22px;
+    padding-bottom: 10px;
+    text-align: center;
+    display: block;
+
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.navbar.sticky .menu li a:hover{
+    color: black;
+}
+
+/*Navbar logo*/
+.navbar .logo{
+    padding-top: 10px;
+}
+.navbar .logo a{
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: palevioletred;
+
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span{
+    color: black;
+}
+
+/* HOME SECTION */
+.home{
+    display: flex;
+    height: 100vh;
+    background-image: url(Images/Harley01.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    min-height: 550px; /*Stop box going to small on small screens */
+    
+    /* for text inside */
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width{
+    margin: auto auto auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -4px;
+    
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 10px 0;
+}
+.home .home-content .text-3 span{
+    color: palevioletred;
+    font-weight: 600;
+}
