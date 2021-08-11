@@ -52,7 +52,8 @@
 }
 
 .navbar .menu li a{
-    min-width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
     color: white;
     font-size: 20px;
     font-weight: 500;
@@ -79,6 +80,7 @@
     display: none;
 }
 
+
 /*Navbar logo*/
 .navbar .logo{
     padding-top: 10px;
@@ -99,13 +101,15 @@
 }
 
 /* Responive navbar */
-@media (max-width: 1000px){
-    .max-width{
-        padding-top: 0 50px;
-    }
+@media (max-width: 1050px){
+    
     .menu-btn{
         display: block;
         z-index: 999;
+    }
+    
+    .menu-btn i.active::before{
+        content: "\f00d"
     }
 
     .navbar .menu{
@@ -139,11 +143,14 @@
     }
 }
 
+
+
+
 /* HOME SECTION */
 .home{
     display: flex;
     height: 100vh;
-    background-image: url(Images/Harley01.png);
+    background-image: url(Images/HarleyBackground.png);
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
@@ -169,9 +176,44 @@
 }
 .home .home-content .text-3{
     font-size: 40px;
-    margin: 10px 0;
 }
 .home .home-content .text-3 span{
     color: palevioletred;
     font-weight: 600;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background: palevioletred;
+    color: white;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid palevioletred;
+
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: palevioletred;
+    background: none;
+}
+
+/* fix homescreen on smaller devices */
+@media (max-width: 1050px){
+    .home .max-width{
+        margin: auto auto auto 0px !important;
+    }
+
+    .home .home-content a{
+        font-size: 20px;
+        padding: 8px 30px;
+    }
+}
+
+@media (max-width: 690px){
+    .max-width{
+        padding-left: 10px !important;
+        padding-right: 20px !important;
+    }
 }

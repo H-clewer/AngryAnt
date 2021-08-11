@@ -12,9 +12,9 @@ $(document).ready(function(){
         }
     })
 
-    //toggle navbar on small screens
+    //toggle navbar dropdown on small screens
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active");
-        console.log('harley');
+        $('.menu-btn i').toggleClass("active");
     });
 });
