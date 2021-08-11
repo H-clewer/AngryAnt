@@ -70,6 +70,15 @@
     color: black;
 }
 
+/* Nabvar dropdown button */
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    padding-top: 12px;
+    display: none;
+}
+
 /*Navbar logo*/
 .navbar .logo{
     padding-top: 10px;
@@ -87,6 +96,47 @@
 
 .navbar.sticky .logo a span{
     color: black;
+}
+
+/* Responive navbar */
+@media (max-width: 1000px){
+    .max-width{
+        padding-top: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: black;
+        text-align: center;
+        padding-top: 80px;
+
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active{
+        left: 0px;
+    }
+
+    .navbar .menu li{
+        display: block;
+        border-radius: 0;
+    }
+
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 0px 0px;
+        padding: 20px 20px;
+        font-size: 25px;
+        
+    }
 }
 
 /* HOME SECTION */
