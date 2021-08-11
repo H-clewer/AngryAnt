@@ -16,7 +16,7 @@
     /* background: palevioletred; */
     font-family: 'Ubuntu', sans-serif;
     padding: 0px 0px;
-
+    z-index: 998;
     transition: all 0.3s ease;
 }
 
@@ -80,7 +80,6 @@
     display: none;
 }
 
-
 /*Navbar logo*/
 .navbar .logo{
     padding-top: 10px;
@@ -100,6 +99,162 @@
     color: black;
 }
 
+
+/* HOME SECTION */
+.home{
+    display: flex;
+    height: 100vh;
+    background-image: url(Images/HarleyBackground.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    min-height: 550px; /*Stop box going to small on small screens */
+    
+    /* for text inside */
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width{
+    margin: auto auto auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -4px;
+    
+}
+.home .home-content .text-3{
+    font-size: 40px;
+}
+.home .home-content .text-3 .typed-color{
+    color: palevioletred;
+    font-weight: 600;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background: palevioletred;
+    color: white;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid palevioletred;
+
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: palevioletred;
+    background: none;
+}
+
+
+/* ABOUT SECTION */
+.section{
+    padding: 100px 0;
+}
+.about{
+    font-family: 'Poppins', sans-serif;
+    padding: 80px 0;
+}
+.about .title{
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.about .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: black;
+
+    transform: translateX(-50%);
+}
+
+.about .title::after{
+    content: "Who Am I?";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    font-size: 20px;
+    padding: 5px;
+    background: white;
+    color: palevioletred;
+
+    transform: translateX(-50%);
+}
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left{
+    width: 45%;
+
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+
+}
+.about .about-content .right .about-title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.about .about-content .right .about-title span{
+    color: palevioletred;
+    font-weight: 800;
+    text-decoration: underline;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    /* font-weight: 700;
+    font-size: 18px;
+    text-decoration: underline; */
+
+    display: inline-block;
+    background: palevioletred;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid palevioletred;
+
+    transition: all 0.3s ease;
+
+}
+.about .about-content .right a:hover{
+    color: palevioletred;
+    background: none;
+}
+
+
+
+
+/* RESPONSIVE ELEMENTS START */
 /* Responive navbar */
 @media (max-width: 1050px){
     
@@ -143,77 +298,56 @@
     }
 }
 
+/* RESPONISVE PAGES*/
+@media (max-width: 1100px){
 
+     .max-width{
+        /* max-width: 800px; */
+        padding: 0 60px;
+    } 
 
-
-/* HOME SECTION */
-.home{
-    display: flex;
-    height: 100vh;
-    background-image: url(Images/HarleyBackground.png);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-attachment: fixed;
-    min-height: 550px; /*Stop box going to small on small screens */
-    
-    /* for text inside */
-    color: white;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.home .max-width{
-    margin: auto auto auto 40px;
-}
-
-.home .home-content .text-1{
-    font-size: 27px;
-}
-.home .home-content .text-2{
-    font-size: 75px;
-    font-weight: 600;
-    margin-left: -4px;
-    
-}
-.home .home-content .text-3{
-    font-size: 40px;
-}
-.home .home-content .text-3 span{
-    color: palevioletred;
-    font-weight: 600;
-}
-
-.home .home-content a{
-    display: inline-block;
-    background: palevioletred;
-    color: white;
-    font-size: 25px;
-    padding: 12px 36px;
-    margin-top: 20px;
-    border-radius: 5px;
-    border: 2px solid palevioletred;
-
-    transition: all 0.3s ease;
-}
-.home .home-content a:hover{
-    color: palevioletred;
-    background: none;
-}
-
-/* fix homescreen on smaller devices */
-@media (max-width: 1050px){
+    /* Home Page */
     .home .max-width{
         margin: auto auto auto 0px !important;
     }
-
     .home .home-content a{
         font-size: 20px;
         padding: 8px 30px;
     }
+
+
+    /* About Page */
+    .about .about-content .column{
+        width: 50%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: left;
+        margin: 0 auto 60px;
+    }
+    
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+
+
 }
 
-@media (max-width: 690px){
+@media (max-width: 850px){
     .max-width{
         padding-left: 10px !important;
         padding-right: 20px !important;
     }
+
+    /* About Page */
+    .about .about-content .right{
+        flex: 100%;
+    } 
+    .about .about-content .left{
+        justify-content: center;
+    } 
 }

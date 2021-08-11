@@ -17,4 +17,17 @@ $(document).ready(function(){
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
+
+    // Typing Animation
+    var typed = new Typed(".typing", {
+        strings: [
+        "an <span class='typed-color'> Electronic Engineer</span>",
+        "a <span class='typed-color'> Programmer</span>", 
+        "a <span class='typed-color'> Web Developer</span>", 
+        "a <span class='typed-color'> Gamer</span>", 
+        "an <span class='typed-color'> Absolute Legend!</span>^1000"],
+        typeSpeed: 40, 
+        backSpeed: 60, 
+        loop: true,
+    })
 });
