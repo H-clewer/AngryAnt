@@ -153,16 +153,8 @@
     background: none;
 }
 
-
-/* ABOUT SECTION */
-.section{
-    padding: 100px 0;
-}
-.about{
-    font-family: 'Poppins', sans-serif;
-    padding: 80px 0;
-}
-.about .title{
+/* SECTION TITLES */
+section .title{
     position: relative;
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
@@ -171,7 +163,7 @@
     margin-bottom: 60px;
     padding-bottom: 20px;
 }
-.about .title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -183,8 +175,8 @@
     transform: translateX(-50%);
 }
 
-.about .title::after{
-    content: "Who Am I?";
+section .title::after{
+    content: "";
     position: absolute;
     bottom: -13px;
     left: 50%;
@@ -195,6 +187,20 @@
 
     transform: translateX(-50%);
 }
+
+
+/* ABOUT SECTION */
+.section{
+    padding: 100px 0;
+}
+.about{
+    font-family: 'Poppins', sans-serif;
+    padding: 80px 0;
+}
+.about .title::after{
+    content: "Who Am I?";
+}
+
 .about .about-content{
     display: flex;
     flex-wrap: wrap;
@@ -251,6 +257,59 @@
     background: none;
 }
 
+
+/* SERVICES SECTION */
+.services{
+    padding: 30px 30px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: black;
+}
+.services .title::after{
+    content: "What I Offer";
+    background: black;
+}
+.services .title::before{
+    background: white;
+}
+.services .services-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.services .services-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover{
+    background: palevioletred;
+}
+.services .services-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .services-content .card i{
+    font-size: 50px;
+    color: palevioletred;
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover i{
+    color: white;
+}
+.services .services-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
 
 
 
@@ -350,4 +409,33 @@
     .about .about-content .left{
         justify-content: center;
     } 
+
+    /* Services page */
+
+    .services .services-content{
+        flex-direction: column;
+    }
+    .services .services-content{
+        flex-direction: column;
+    }
+    .services .services-content .card{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    /* .services .services-content .card .text{
+        font-size: 18px;
+    }
+    .services .services-content .card i{
+        font-size: 40px;
+    }
+    .services .services-content .card p{
+        font-size: 14px;
+    } */
+}
+
+@media (max-width: 650px){
+    .services .services-content{
+        
+    }
 }
