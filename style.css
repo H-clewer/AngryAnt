@@ -153,7 +153,7 @@
     background: none;
 }
 
-/* SECTION TITLES */
+/* TITLES FOR EACH SECTION */
 section .title{
     position: relative;
     font-family: 'Ubuntu', sans-serif;
@@ -264,6 +264,7 @@ section .title::after{
     font-family: 'Poppins', sans-serif;
     color: white;
     background: black;
+    margin-bottom: 50px;
 }
 .services .title::after{
     content: "What I Offer";
@@ -310,6 +311,8 @@ section .title::after{
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+
+/* SKILLS SECTION */
 
 
 
